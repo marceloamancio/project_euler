@@ -1,24 +1,20 @@
 # project Euler problem 25
-#answer: 4782
-def find_fib(n):
+# answer: 4782
+
+def find_fib(maxs):
   la, lb = 0, 1
+  counter = 1
 
-  if n == 0:
-    return la
-
-
-  for i in range(n-1):
+  while len(str(lb)) < maxs:
     lb, la = la + lb, lb
+    counter += 1
 
-  return lb
-
+  return counter
 
 if __name__ == '__main__':
-  n = 4700
-  while(len(str(find_fib(n)))<1000):
-    n = n+1
+  answer = find_fib(1000)
 
-  print(n)
+  print(answer)
 
 
 
